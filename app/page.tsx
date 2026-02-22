@@ -36,8 +36,9 @@ export default function Home() {
             <Image src="/img/transparentpunchiocn.png" alt="Punch Logo" width={32} height={32} className="w-8 h-8" />
             <div className="text-xl font-bold tracking-tight text-punch-cocoa">Punch</div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <a href="#waitlist" className="text-sm font-medium text-gray-500 hover:text-punch-cocoa transition-colors">Waitlist</a>
+            <a href="/signin" className="text-sm font-bold text-white bg-punch-orange hover:bg-punch-orangeDark px-5 py-2 rounded-full transition-all shadow-md shadow-punch-orange/20">Try Punch</a>
           </div>
         </div>
       </nav>
