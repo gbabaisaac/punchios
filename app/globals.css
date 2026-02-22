@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 28, 28, 28;
+  --background-rgb: 255, 248, 242;
+  --primary: #E85D04;
+  --primary-light: #FF6A13;
+  --cocoa: #5A2E1C;
+  --cream: #FFF8F2;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4E7DA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E7D6C6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4C4B4;
+}
+
+/* Chat bubble styling */
+.chat-bubble {
+  @apply px-4 py-3 rounded-2xl max-w-[280px];
+}
+
+.chat-bubble-user {
+  @apply bg-punch-orange text-white ml-auto rounded-br-md;
+}
+
+.chat-bubble-ai {
+  @apply bg-white text-gray-800 border border-punch-border rounded-bl-md;
+}
+
+/* Section transitions */
+.section-fade {
+  @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+}
+
+.section-fade.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+/* Orange glow effect */
+.orange-glow {
+  filter: drop-shadow(0 0 30px rgba(232, 93, 4, 0.3));
+}
+
+/* Animated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #E85D04 0%, #FF6A13 50%, #E85D04 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
